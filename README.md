@@ -32,6 +32,7 @@
 - [モダンなWebアプリ(Django, Next.js, Docker, AWS)を開発する #環境構築編](https://qiita.com/azumarions/items/2b7f9730196e943134f6)
 
 
+
 ### github(ssh)
 - mkdir ~/.ssh
 - ssh-keygen -t ed25519 -C "miya.taka.0096@gmail.com"
@@ -43,6 +44,8 @@
 #### 参照サイト
 - [UbuntuからGitHubへのSSH接続設定](https://zenn.dev/perilla/scraps/351f43bfcd13ec)
 - [GitHubにSSH接続する完全版](https://bkbkb.net/articles/ssh_github)
+
+
 
 ### その他
 - 現在のディレクトリ以下すべてのファイルパーミッションを変更するには `sudo chmod -R 777 .` を実行
