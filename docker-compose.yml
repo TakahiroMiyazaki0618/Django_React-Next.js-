@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: frontend_react
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - WATCHPACK_POLLING=true #ホットリロード（ソースコードを即時にアプリケーションに反映）
+    tty: true
+    stdin_open: true
+
+  backend:
+    container_name: backend_django
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+
+  db:
+    container_name: database_mysql
+    image: mysql:8
+    command:
+      --collation-server=utf8mb4_0900_bin
+      --transaction-isolation=READ-COMMITTED
+    restart: always
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    env_file:
+      - ./database/.env
+    ports:
+      - "3306:3306"
+      
+
+volumes:
+  mysql_data:
