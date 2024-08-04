@@ -1,3 +1,6 @@
 django
 djangorestframework
 mysqlclient
+
+# 追加
+# django-cors-headers
