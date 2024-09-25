@@ -23,6 +23,7 @@
 - yarn add @mui/x-data-grid
 - yarn add axios
 - yarn add swr
+- yarn add react-hook-form
 
 #### database(MySQL)
 
