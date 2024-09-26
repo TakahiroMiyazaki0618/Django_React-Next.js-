@@ -24,6 +24,7 @@
 - yarn add axios
 - yarn add swr
 - yarn add react-hook-form
+- yarn add @mui/icons-material
 
 #### database(MySQL)
 
