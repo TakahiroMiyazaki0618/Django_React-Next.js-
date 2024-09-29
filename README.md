@@ -13,6 +13,10 @@
 - django-admin startproject config .
 - python manage.py runserver 0:5000 --settings config.settings.development
 - http://localhost:5000/
+- django-admin startapp inventory
+- python manage.py makemigrations inventory --settings config.settings.development
+- python manage.py sqlmigrate inventory 0001 --settings config.settings.development（DDL確認用）
+- python manage.py migrate --settings config.settings.development
 
 #### frontend(React(Next.js))
 - docker-compose exec -it frontend /bin/bash
